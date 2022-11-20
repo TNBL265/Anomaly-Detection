@@ -118,6 +118,7 @@ def connectdb(thread=False):
         db = DATABASE('UEData')
         db.read_data("liveUE")
         ue_data = db.data.values.tolist()  # needs to be updated in future when live feed will be coming through KPIMON to influxDB
+        ue_data = ue_data[2300:2400]       # only use a subset for demo purpose
     cp = CAUSE(db)
 
 
