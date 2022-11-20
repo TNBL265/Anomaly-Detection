@@ -34,5 +34,8 @@ COPY LICENSE.txt /tmp/
 # RUN mkdir -p /tmp/ad/
 COPY ad/ /ad
 RUN pip install /tmp
+RUN pip install --force-reinstall redis==3.0.1
+
+# Run
 ENV PYTHONUNBUFFERED 1
 CMD PYTHONPATH=/ad:/usr/lib/python3.7/site-packages/:$PYTHONPATH run-ad.py

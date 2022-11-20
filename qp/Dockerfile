@@ -34,6 +34,7 @@ COPY setup.py /tmp
 COPY LICENSE.txt /tmp/
 COPY qp/ /qp
 RUN pip install /tmp
+RUN pip install --force-reinstall redis==3.0.1
 
 # Run
 ENV PYTHONUNBUFFERED 1
