@@ -27,7 +27,7 @@ import datetime
 class INSERTDATA:
 
     def __init__(self):
-        host = 'r4-influxdb.ricplt'
+        host = 'ricplt-influxdb.ricplt'
         self.client = DataFrameClient(host, '8086', 'root', 'root')
         self.switchdb('UEData')
         self.dropmeas('QP')

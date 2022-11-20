@@ -35,7 +35,7 @@ class DATABASE(object):
 
     Parameters
     ----------
-    host: str (default='r4-influxdb.ricplt.svc.cluster.local')
+    host: str (default='ricplt-influxdb.ricplt.svc.cluster.local')
         hostname to connect to InfluxDB
     port: int (default='8086')
         port to connect to InfluxDB
@@ -52,7 +52,7 @@ class DATABASE(object):
         fetched data from database
     """
 
-    def __init__(self, dbname, user='root', password='root', host="r4-influxdb.ricplt", port='8086'):
+    def __init__(self, dbname, user='root', password='root', host="ricplt-influxdb.ricplt", port='8086'):
         self.data = None
         self.client = DataFrameClient(host, port, user, password, dbname)
 

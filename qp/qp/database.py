@@ -25,7 +25,7 @@ class NoDataError(Exception):
 
 class DATABASE(object):
 
-    def __init__(self, dbname, user='root', password='root', host='r4-influxdb.ricplt', port='8086'):
+    def __init__(self, dbname, user='root', password='root', host='ricplt-influxdb.ricplt', port='8086'):
         self.client = DataFrameClient(host, port, user, password, dbname)
         self.data = None
 
