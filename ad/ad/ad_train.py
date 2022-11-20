@@ -14,6 +14,11 @@
 #  limitations under the License.
 # ==================================================================================
 
+def warn(*args, **kwargs):
+    pass
+import warnings
+warnings.warn = warn
+
 import joblib
 from ad_model.processing import PREPROCESS
 from sklearn.metrics import f1_score
