@@ -13,7 +13,7 @@
 #  See the License for the specific language governing permissions and
 #  limitations under the License.
 # ==================================================================================
-FROM frolvlad/alpine-miniconda3
+FROM frolvlad/alpine-miniconda3:python3.7
 # RMR setup
 RUN mkdir -p /opt/route/
 
